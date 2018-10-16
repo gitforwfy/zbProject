@@ -1,0 +1,60 @@
+/*去掉浏览器默认间距*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*主体颜色*/
+body{
+    background-color: snow;
+}
+
+/*主体div*/
+.root{
+    width: 80%;
+    height: 1000px;
+    background-color: antiquewhite;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*头部*/
+.heading{
+    width: 100%;
+    height: 100px;
+    background-color: snow;
+    margin: 0px auto;
+}
+/*主体*/
+.body{
+    width: 100%;
+    height: 800px;
+}
+
+/*底部*/
+.footing{
+    width: 100%;
+    height: 100px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 10px;
+    color: darkgray;
+}
+
+/*分隔线*/
+.line{
+    width: 100%;
+}
+
+/*链接设置*/
+a:link,a:visited{
+    font-weight: bold;
+    color: darkgray;
+    text-align: center;
+    padding: 6px;
+    text-decoration: none;
+}
+/*鼠标经过链接的颜色*/
+a:hover,a:active{
+    color: dimgray;
+}

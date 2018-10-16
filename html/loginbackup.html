@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>layout 后台大布局 - Layui</title>
+
+  <link rel="stylesheet" href="layui/css/layui.css">
+
+<style type="text/css">
+	body{
+		margin:0px;
+	}
+	div#window{  
+	
+	    width: 100%;  
+	    
+	    height:950px;
+	    
+	    background-color : #1E9FFF;
+	
+	}
+	div#head{
+		width:100%;
+		height:10%;
+	}
+	div#body{
+		width:40%;
+		height:80%;
+		margin-left:30%;
+		background-color : red;
+	}
+	div#foot{
+		width:100%;
+		height:10%;
+	}	
+</style>
+
+</head>
+
+<body>
+
+<div id="window">
+	<div id="head">头部</div>
+	
+	<div id="body">
+	
+		<form  class="layui-form" method="post">
+			 <div class="layui-form-item" id="name">
+		    <label class="layui-form-label">用户名：</label>
+		    <div class="layui-input-inline">	
+		      <input type="text" name="user" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">		
+		    </div>		
+		  </div>
+		
+		  <div class="layui-form-item" id="password">
+		    <label class="layui-form-label">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+		    <div class="layui-input-inline">
+		      <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+		    </div>
+		  </div>
+		
+			  <div class="layui-form-item" id="button">
+<!-- 		  		<input type="checkbox" name="" lay-skin="primary" checked /> -->
+<!-- 			<div style="margin-left: 50px;" class="layui-unselect layui-form-checkbox" lay-skin="primary"><span>保持登录7天</span><i class="layui-icon"></i></div> -->
+			
+		    <div class="layui-input-inline">
+		     <button id="btn_login" class="layui-btn">用户登陆</button>
+		    </div>
+		  </div>
+		 
+
+		</form>
+	
+	
+	
+	</div>
+	
+	<div id="foot">底部</div>
+
+</div>
+ 
+<script type="text/javascript" src="../bmob/jquery.min.js"></script>
+<script type="text/javascript" src="../bmob/bmob.js"></script>
+<!-- <script type="text/javascript" src="layui/layui.js"></script> -->
+<script type="text/javascript">
+    	$(document).ready(function(){
+//     				Bmob.initialize("73aa7d9397e2c1c72516c486d5686a1b", "b88e357be43c2654273945a08526fdec");
+					$("#btn_login").click(function(){
+			Bmob.initialize("73aa7d9397e2c1c72516c486d5686a1b", "b88e357be43c2654273945a08526fdec");
+			var TestObject = Bmob.Object.extend("MyObject");
+		    var testObject = new TestObject();
+		      testObject.save({foo: "bar"}, {
+		      success: function(object) {
+		        $(".success").show();
+		      },
+		      error: function(model, error) {
+		        $(".error").show();
+		      }
+		    });
+		});
+
+			});
+// 	layui.use(['layer', 'form'], function(){
+// 			var $ = layui.jquery, layer = layui.layer, form = layui.form;
+// 			$(document).ready(function(){
+// 					$("#btn_login").click(function(){
+// 						Bmob.initialize("73aa7d9397e2c1c72516c486d5686a1b", "b88e357be43c2654273945a08526fdec");
+// 						var TestObject = Bmob.Object.extend("MyObject");
+// 					    var testObject = new TestObject();
+// 					      testObject.save({foo: "bar"}, {
+// 					      success: function(object) {
+// 					        $(".success").show();
+// 					      },
+// 					      error: function(model, error) {
+// 					        $(".error").show();
+// 					      }
+// 					    });
+// 						alert("create object fail");
+// 					});
+
+// 			});
+// 	});
+
+</script>
+
+</body>
+
+</html>

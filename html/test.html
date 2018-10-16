@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+      <meta charset="UTF-8">
+    <title>My JSP 'test.jsp' starting page</title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+
+  </head>
+  
+  <body>
+    This is my JSP page. <br>
+    
+    <script>
+//JavaScript代码区域
+layui.use(['layer', 'form'], function(){
+  var $ = layui.jquery, layer = layui.layer, form = layui.form;
+	 //layer.msg('Hello World');
+	$(document).ready(function(){
+	$("button").click(function(){
+	layer.msg('Hello World');
+});
+});
+});
+
+</script>
+    
+    
+    
+    
+ <script type="text/javascript">
+	var Bmob = require('hydrogen-js-sdk-master/dist/Bmob-1.6.4.min.js');
+	//Bmob.initialize("Application ID", "REST API Key");
+    Bmob.initialize("73aa7d9397e2c1c72516c486d5686a1b", "b88e357be43c2654273945a08526fdec");
+	
+	var TestObject = Bmob.Object.extend("TestObject");
+    var testObject = new TestObject();
+      testObject.save({foo: "bar"}, {
+      success: function(object) {
+        $(".success").show();
+      },
+      error: function(model, error) {
+        $(".error").show();
+      }
+    });
+	
+	/*
+	//获取一行数据
+	var GameScore = Bmob.Object.extend("GameScore");
+    var query = new Bmob.Query(GameScore);
+    query.get("4edc3f6ee9", {
+      success: function(object) {
+        // The object was retrieved successfully.
+        alert(object.get("score"));
+      },
+      error: function(object, error) {
+        alert("query object fail");
+      }
+    });
+	*/
+	
+	/*
+	//修改一行数据
+	var GameScore = Bmob.Object.extend("GameScore");
+    var query = new Bmob.Query(GameScore);
+    query.get("4edc3f6ee9", {
+      success: function(object) {
+        // The object was retrieved successfully.
+        object.set("score", 1338);
+        object.save(null, {
+          success: function(objectUpdate) {
+            alert("create object success, object score:"+objectUpdate.get("score"));
+          },
+          error: function(model, error) {
+            alert("create object fail");
+          }
+        });
+      },
+      error: function(object, error) {
+        alert("query object fail");
+      }
+    });
+	*/
+
+	/*	
+	//删除一行数据
+	var GameScore = Bmob.Object.extend("GameScore");
+    var query = new Bmob.Query(GameScore);
+    query.get("4edc3f6ee9", {
+      success: function(object) {
+        // The object was retrieved successfully.
+        object.destroy({
+          success: function(deleteObject) {
+          alert("delete success");
+          },
+          error: function(GameScoretest, error) {
+          alert("delete fail");
+          }
+        });
+      },
+      error: function(object, error) {
+        alert("query object fail");
+      }
+    });
+	*/
+
+	
+  </script>
+  </body>
+</html>
