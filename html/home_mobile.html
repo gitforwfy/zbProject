@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <!--宽度是设备的宽度，缩放比例是1.0-->
-    <meta name="viewport" content="width=device-width;initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="../jq_mobile/jquery.mobile-1.4.5.min.css">
     <script src="../jq/jquery.min.js"></script>
@@ -12,28 +12,88 @@
 <body>
 <div data-role="page">
 
-    <div data-role="header">
+    <div data-role="header" data-position="fixed" data-theme="b">
         <h1 id="h1_user_info"></h1>
     </div>
 
     <div data-role="content" class="ui-content">
+        <!--帐号信息-->
 
+        <div class="ui-grid-b">
+            <div class="ui-block-a">
+                <div class="ui-bar ui-bar-a">激活码</div>
+            </div>
+            <div class="ui-block-b">
+                <div class="ui-bar ui-bar-a">本金钱包</div>
+            </div>
+            <div class="ui-block-c">
+                <div class="ui-bar ui-bar-a">利润钱包</div>
+            </div>
+        </div>
+        <!--菜单-->
+        <div class="ui-grid-c">
+            <div class="ui-block-a">
+                <div class="ui-bar ui-bar-a">激活码转让</div>
+             </div>
+            <div class="ui-block-b">
+                <div class="ui-bar ui-bar-a">团队激活</div>
+            </div>
+            <div class="ui-block-c">
+                <div class="ui-bar ui-bar-a">帮助中心</div>
+            </div>
+            <div class="ui-block-d">
+                <div class="ui-bar ui-bar-a">新闻中心</div>
+            </div>
+            <div class="ui-block-a">
+                <div class="ui-bar ui-bar-a">留言</div>
+            </div>
+            <div class="ui-block-b">
+                <div class="ui-bar ui-bar-a">注册链接</div>
+            </div>
+            <div class="ui-block-c">
+                <div class="ui-bar ui-bar-a">下载app</div>
+            </div>
+            <div class="ui-block-d">
+                <div class="ui-bar ui-bar-a">共享商城</div>
+            </div>
+        </div>
 
-        <img src="../jq_mobile/images/icons-png/home-black.png">
-
-
+        <!--买入订单-->
+        <div class="ui-grid-b">
+            <div class="ui-block-a">
+                <div class="ui-bar ui-bar-a">待匹配</div>
+            </div>
+            <div class="ui-block-b">
+                <div class="ui-bar ui-bar-a">待付款</div>
+            </div>
+            <div class="ui-block-c">
+                <div class="ui-bar ui-bar-a">待确认</div>
+            </div>
+        </div>
+        <!--卖出订单-->
+        <div class="ui-grid-b">
+            <div class="ui-block-a">
+                <div class="ui-bar ui-bar-a">待匹配</div>
+            </div>
+            <div class="ui-block-b">
+                <div class="ui-bar ui-bar-a">待付款</div>
+            </div>
+            <div class="ui-block-c">
+                <div class="ui-bar ui-bar-a">待确认</div>
+            </div>
+        </div>
 
     </div>
 
-    <div data-role="footer">
-        <div data-role="header">
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#anylink">提供帮助</a></li>
-                    <li><a href="#anylink">个人中心</a></li>
-                    <li><a href="#anylink">得到帮助</a></li>
-                </ul>
-            </div>
+
+    <a href="#" class="ui-btn">安全退出</a>
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#anylink" data-icon="arrow-l">提供帮助</a></li>
+                <li><a href="#anylink" data-icon="home">个人中心</a></li>
+                <li><a href="#anylink" data-icon="arrow-r">得到帮助</a></li>
+            </ul>
         </div>
     </div>
 
