@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--宽度是设备的宽度，缩放比例是1.0-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../jq_mobile/jquery.mobile-1.4.5.min.css">
+    <script src="../jq/jquery.min.js"></script>
+    <script src="../jq_mobile/jquery.mobile-1.4.5.js"></script>
+</head>
+<body>
+    <div data-role="page">
+
+        <div data-role="header" data-position="fixed" data-theme="b"  data-add-back-btn="true">
+            <h1 id="h1_user_info">提供帮助</h1>
+        </div>
+
+            <!--选择额度-->
+            <label for="day">选择额度</label>
+            <select name="day" id="day">
+                <option value="mon">M1(2000)</option>
+                <option value="tue">M2(4000)</option>
+                <option value="wed">M3(8000)</option>
+                <option value="thu">M4(12000)</option>
+            </select>
+            <!--同意-->
+            <input type="radio" name="gender" id="male" value="male" data-mini="true">
+            <label for="male">我已阅读并同意</label>
+            <a href="agreements.html">选择理财相关协议</a>
+            <!--提交-->
+            <a data-role="button" data-transition="flow" id="btn_login">提交</a>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -2,32 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Title</title>
     <!--宽度是设备的宽度，缩放比例是1.0-->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Title</title>
     <link rel="stylesheet" href="../jq_mobile/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="../css/global.css">
     <script src="../jq/jquery.min.js"></script>
     <script src="../jq_mobile/jquery.mobile-1.4.5.js"></script>
 </head>
 <body>
 <div data-role="page">
-
-    <div data-role="header" data-position="fixed" data-theme="b">
-        <h1 id="h1_user_info"></h1>
+    <!--头部-->
+    <div data-role="header" data-position="fixed" data-theme="b" data-add-back-btn="true">
+        <h1 id="h1_user_info">haomeicha</h1>
     </div>
 
     <div data-role="content" class="ui-content">
         <!--帐号信息-->
-        <img src="../jq_mobile/images/icons-png/home-black.png" style="width: 200px;height: 200px">
+        <div>
+            <img src="../img/head.png">
+            <div>总额资产</div>
+            <div>0</div>
+        </div>
+
         <div class="ui-grid-b">
             <div class="ui-block-a">
                 <div class="ui-bar ui-bar-a">激活码</div>
+                <div>0</div>
             </div>
             <div class="ui-block-b">
                 <div class="ui-bar ui-bar-a">本金钱包</div>
+                <div>0</div>
             </div>
             <div class="ui-block-c">
                 <div class="ui-bar ui-bar-a">利润钱包</div>
+                <div>0</div>
             </div>
         </div>
         <!--菜单-->
@@ -87,12 +96,15 @@
 
 
     <a href="#" class="ui-btn">安全退出</a>
+
+
+    <!--底部导航-->
     <div data-role="footer" data-position="fixed" data-theme="b">
         <div data-role="navbar">
             <ul>
-                <li><a href="#anylink" data-icon="arrow-l">提供帮助</a></li>
-                <li><a href="#anylink" data-icon="home">个人中心</a></li>
-                <li><a href="#anylink" data-icon="arrow-r">得到帮助</a></li>
+                <li><a href="#anylink">提供帮助</a></li>
+                <li><a href="#anylink">得到帮助</a></li>
+                <li><a href="#anylink">个人中心</a></li>
             </ul>
         </div>
     </div>
