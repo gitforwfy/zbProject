@@ -17,21 +17,23 @@
         </div>
 
             <!--选择额度-->
-            <label for="day">选择额度</label>
-            <select name="day" id="day">
-                <option value="mon">M1(2000)</option>
-                <option value="tue">M2(4000)</option>
-                <option value="wed">M3(8000)</option>
-                <option value="thu">M4(12000)</option>
+            <label for="money">选择额度</label>
+            <select id="money">
+                <!--<option value="m1">M1(2000)</option>-->
+                <!--<option value="m2">M2(4000)</option>-->
+                <!--<option value="m3">M3(8000)</option>-->
+                <!--<option value="m4">M4(12000)</option>-->
             </select>
             <!--同意-->
-            <input type="radio" name="gender" id="male" value="male" data-mini="true">
-            <label for="male">我已阅读并同意</label>
+            <input type="radio" id="read" value="true" data-mini="true">
+            <label for="read">我已阅读并同意</label>
             <a href="agreements.html">选择理财相关协议</a>
             <!--提交-->
             <a data-role="button" data-transition="flow" id="btn_login">提交</a>
         </div>
 
     </div>
+    <script type="text/javascript" src="../bmob/bmob.js"></script>
+    <script src="../js/help.js"></script>
 </body>
 </html>
